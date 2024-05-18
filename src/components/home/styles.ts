@@ -35,7 +35,7 @@ export const ProfileImage = styled.div`
   margin-bottom: 1rem;
   overflow: hidden;
   clip-path: polygon(
-    35% 0%,
+    36% -18%,
     90% 20%,
     90% 80%,
     50% 100%,
