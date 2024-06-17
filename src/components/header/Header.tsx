@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { HeaderStyle, H1, Nav } from "./styles";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
