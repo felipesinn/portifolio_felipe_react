@@ -1,4 +1,7 @@
+// components/home/HomePage.tsx
 import profileImage from "../../img/felipe1-depositphotos-bgremover.png";
+import projetoA from '../../img/pokemon.png'; // Imagem do Projeto A
+import projetoB from '../../img/SoundMaster Pro.png'; // Imagem do Projeto B
 import { SocialIcons } from "../../components/iconsLink/SocialIcons";
 import {
   Content,
@@ -30,6 +33,7 @@ export function HomePage() {
           <a href="/cv.pdf" download>
             <ButtonCv>Download CV</ButtonCv>
           </a>
+          
         </TextContainer>
 
         <Bord>
@@ -39,22 +43,22 @@ export function HomePage() {
         </Bord>
       </Content>
 
-      {/* Seção de Projetos em Destaque */}
+    
       <ProjectsHighlight>
         <h2>Projetos em Destaque</h2>
-        {/* Exibindo os projetos */}
         <ProjectItem>
-          <h3>Carregando Projeto A</h3>
+          <img src={projetoA} alt="Capa do Projeto A" style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />
+          <h3>Projeto A</h3>
           <p>Descrição breve do Projeto A.</p>
-          <a href="https://link-do-projeto-a.com" target="_blank" rel="noopener noreferrer">Ver Projeto</a> {/* Link para o projeto */}
+          <a href="https://api-pokemon-react-3.vercel.app" target="_blank" rel="noopener noreferrer">Ver Projeto</a> {/* Link para o projeto */}
         </ProjectItem>
         <ProjectItem>
-          <h3>Carregando Projeto B</h3>
-          <p>Descrição breve do Projeto B.</p>
-          <a href="https://link-do-projeto-b.com" target="_blank" rel="noopener noreferrer">Ver Projeto</a> {/* Link para o projeto */}
+          <img src={projetoB} alt="Capa do Projeto B" style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />
+          <h3>SoundMaster Pro</h3>
+          <p>SoundMaster Pro é gravador de áudio para Rádio desenvolvido em Python um App Desktop para captura para censuras de Rádios.</p>
+          {/* <a href="https://growflix-eta.vercel.app" target="_blank" rel="noopener noreferrer">Ver Projeto</a> */}
         </ProjectItem>
       </ProjectsHighlight>
-
       <ContainerIcons>
         <SocialIcons />
       </ContainerIcons>

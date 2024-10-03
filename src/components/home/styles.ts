@@ -176,6 +176,7 @@ export const ProjectItem = styled.div`
 
  a {
     color: #008e6f; /* Cor do link */
+    font-size :1.2rem;
     text-decoration: none;
 
     &:hover {
