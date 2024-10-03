@@ -10,8 +10,12 @@ export const HomeContainer = styled.div`
   background: linear-gradient(135deg, #21272f, #2c3e50);
   color: white;
   min-height: 100vh;
-  padding: 8em; 
+  padding: 4em; 
   font-family: 'Montserrat', sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 12em 2em 4em;
+  }
 `;
 
 export const Content = styled.div`
@@ -75,7 +79,8 @@ export const TextContainer = styled.div`
    max-width:600px;
 
    @media (max-width:768px) {
-     margin-top:-2rem; 
+     padding: -1em -1em 2em;
+
    }
 `;
 
@@ -133,15 +138,14 @@ export const ButtonCv = styled.button`
   }
 `;
 export const ProjectsHighlight = styled.section`
-  margin-top: 100px; 
-  min-height: 50vh;
-  width: 100%; /* Define a largura total */
-  max-width: 680px; /* Ajuste o valor conforme necessário para a largura desejada */
-  padding: 20px; 
-  border: 2px solid white;
-  background-color: rgba(255,255,255,0.1); /* Fundo sutil */
-  border-radius: 8px; 
-
+margin-top:100px; 
+min-height:50vh;
+width:100%; /* Define a largura total */
+max-width:680px; /* Ajuste o valor conforme necessário para a largura desejada */
+padding:20px; 
+border:2px solid white;
+background-color :rgba(255,255,255,0.1); /* Fundo sutil */
+border-radius :8px;
 
 h2 {
  color:#008e6f; 
@@ -150,39 +154,63 @@ h2 {
  font-size :2rem;
  animation:fadInDown1s ease-in-out forwards ;
 }
+
+@media (max-width :768px) {
+ margin-top :60px; /* Reduzir margem superior em telas menores */
+ padding :15px; /* Ajuste o preenchimento em telas menores */
+ max-width :90%; /* Aumenta a largura máxima em telas menores */
+
+ h2 {
+   font-size :1.5rem; /* Reduzir tamanho da fonte do título em telas menores */
+ }
+}
 `;
 
 export const ProjectItem = styled.div`
- background-color :rgba(255,255,255,0.2); /* Fundo dos itens */
- border: 2px solid white;
- margin-bottom :15px; /* Espaçamento entre os itens */
- padding :18px ; /* Espaçamento interno */
- border-radius :4px ; /* Bordas arredondadas */
+background-color :rgba(255,255,255,0.2); /* Fundo dos itens */
+border :2px solid white;
+margin-bottom :15px; /* Espaçamento entre os itens */
+padding :18px ; /* Espaçamento interno */
+border-radius :4px ; /* Bordas arredondadas */
 
- transition :transform .3s ease ; /* Transição suave */
+transition :transform .3s ease ; /* Transição suave */
 
- &:hover {
+&:hover {
  transform :scale(1.05); 
- }
+}
 
- h3 {
+h3 {
  color:#fff ; /* Cor do título do projeto */
  margin-bottom :5px ;
- }
+ font-size :1.5rem;
 
- p {
+ @media (max-width :768px) {
+   font-size :1.3rem; /* Reduzir tamanho da fonte do título em telas menores */
+ }
+}
+
+p {
  color:#ccc ; /* Cor da descrição */
+ font-size :1rem;
+
+ @media (max-width :768px) {
+   font-size :.9rem ; /* Reduzir tamanho da fonte da descrição em telas menores */
+ }
+}
+
+a {
+ color:#008e6f ; /* Cor do link */
+ font-size:1.2rem ;
+ text-decoration:none;
+
+ &:hover {
+   text-decoration:none ; /* Sublinhado ao passar o mouse */
  }
 
- a {
-    color: #008e6f; /* Cor do link */
-    font-size :1.2rem;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline; /* Sublinhado ao passar o mouse */
-    }
+ @media (max-width :768px) {
+   font-size :1rem ; /* Reduzir tamanho da fonte do link em telas menores */
  }
+}
 `;
 
 // Adicione animações usando keyframes se necessário
