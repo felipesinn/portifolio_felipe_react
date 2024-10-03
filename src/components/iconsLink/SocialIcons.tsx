@@ -1,17 +1,26 @@
+// components/iconsLink/SocialIcons.tsx
 import styled from "styled-components";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const IconContainer = styled.div`
   display: flex;
+  flex-direction: column; /* Padrão: coluna para telas maiores */
   align-items: center;
-  justify-content: space-between;
-  width: 280px;
+  justify-content: center;
+  position: fixed;
+  left: 20px; /* Distância da borda esquerda */
+  top: 78%; /* Posição vertical */
+  transform: translateY(-50%); 
   margin-top: 2rem;
 
   @media (max-width: 768px) {
-    flex-direction: row;
-    gap: 1rem;
-    width: 100%; 
+    left: 10px; /* Ajuste para telas menores */
+    top: auto; /* Remove a posição fixa na vertical */
+    bottom: 20px; /* Posição fixa na parte inferior */
+    transform: none; /* Remove a transformação */
+    flex-direction: row; /* Muda para linha em telas menores */
+    gap: 1rem; /* Espaçamento entre os ícones */
+    width: auto; 
     justify-content: center;
   }
 `;
@@ -19,11 +28,10 @@ const IconContainer = styled.div`
 const TextContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 80px;
-  margin-left: -100px;
+  margin-bottom: 1rem; 
 
   @media (max-width: 768px) {
-    margin-right: 0;
+    margin-bottom: 0.5rem;
     justify-content: center;
   }
 `;
@@ -34,44 +42,43 @@ const Text = styled.p`
   margin: 0;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
-    display: none;
-    justify-items: center;
-    
+    font-size: 1.2rem;    
+    display: flex; 
+    justify-items: center;    
   }
 `;
 
 const IconLink = styled.a`
   color: #f7f7f7;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   transition: color 0.3s;
 
-  &:hover {
-    color: #008e6f;
-  }
+  margin-bottom: 1rem; /* Espaçamento entre os ícones */
 
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-    margin-left: 80px;
-    
-  }
+   &:hover {
+    color: #008e6f;
+   }
+
+   @media (max-width: 768px) {
+    font-size: calc(2rem + (2vw)); 
+   }
 `;
 
 export const SocialIcons = () => {
   return (
     <IconContainer>
       <TextContainer>
-        <Text>Siga-me</Text>
       </TextContainer>
-      <IconLink href="https://github.com/felipesinn" target="_blank" rel="noopener noreferrer">
+      <IconLink href="https://github.com/felipesinn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <FaGithub />
       </IconLink>
-      <IconLink href="mailto:felipesinn01@gmail.com">
+      <IconLink href="mailto:felipesinn01@gmail.com" aria-label="Email">
         <FaEnvelope />
       </IconLink>
-      <IconLink href="https://www.linkedin.com/in/felipe-sinn" target="_blank" rel="noopener noreferrer">
+      <IconLink href="https://www.linkedin.com/in/felipe-sinn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <FaLinkedin />
       </IconLink>
+      <Text>Siga-me</Text>
     </IconContainer>
   );
-};
+}
