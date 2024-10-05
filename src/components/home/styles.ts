@@ -144,7 +144,7 @@ width:100%; /* Define a largura total */
 max-width:680px; /* Ajuste o valor conforme necessário para a largura desejada */
 padding:20px; 
 border:2px solid white;
-background-color :rgba(255,255,255,0.1); /* Fundo sutil */
+background-color : #21272F; /* Fundo sutil */
 border-radius :8px;
 
 h2 {
@@ -167,7 +167,7 @@ h2 {
 `;
 
 export const ProjectItem = styled.div`
-background-color :rgba(255,255,255,0.2); /* Fundo dos itens */
+background-color : #3c4753; /* Fundo dos itens */
 border :2px solid white;
 margin-bottom :15px; /* Espaçamento entre os itens */
 padding :18px ; /* Espaçamento interno */

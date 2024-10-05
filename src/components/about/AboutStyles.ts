@@ -6,7 +6,7 @@ export const AboutContent = styled.div`
   align-items: center;
   justify-content: space-between; /* Alinha os itens nas extremidades */
   padding: 20px;
-  background: linear-gradient(135deg, #eaeaea, #f4f4f4); /* Gradiente leve */
+  
   border-radius: 12px; /* Bordas arredondadas */
   box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra suave */
   transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
@@ -25,11 +25,12 @@ export const ProfileImage = styled.div`
   flex: 1; /* Ocupa um espaço igual */
   
   .profile-image {
-    width: 160px; /* Ajuste conforme necessário */
-    height: 160px; /* Mantém a altura igual à largura para ser redonda */
+    width: 260px; /* Ajuste conforme necessário */
+    height: 260px; /* Mantém a altura igual à largura para ser redonda */
     border-radius: 50%; /* Torna a imagem redonda */
-    margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra na imagem */
+    margin-bottom: 20px;
+    border: 2px solid #008e6f;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8); /* Sombra na imagem */
     transition: transform 0.3s ease;
 
     &:hover {

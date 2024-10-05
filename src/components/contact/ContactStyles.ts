@@ -16,7 +16,7 @@ export const ContactContainer = styled.div`
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column; /* Alinha os campos em coluna */
-  background-color: #333; /* Cor de fundo do formulário */
+  background-color: #3c4753; /* Cor de fundo do formulário */
   border: 2px solid white;
   padding: 20px; /* Espaçamento interno */
   border-radius: 8px; /* Bordas arredondadas */
@@ -31,7 +31,7 @@ export const ContactForm = styled.form`
 `;
 
 export const FormField = styled.div`
-  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
+  margin-bottom: 15px; /* Aumenta o espaçamento entre os campos */
 
   label {
     margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
@@ -86,24 +86,24 @@ export const SuccessMessage = styled.p`
 `;
 
 export const ContactInfo = styled.div`
-   margin-top:40px; /* Aumenta a margem superior para mais espaço acima das informações de contato */
+   margin-top:38%;
    margin-left:auto;
    margin-right:auto;
    color:white; /* Cor do texto */
 
    h3 {
-     margin-bottom:10px; /* Espaçamento abaixo do título */
+     margin-bottom:18px; /* Espaçamento abaixo do título */
      text-align:center;
    }
 
    p {
      margin:.5rem auto; /* Espaçamento entre os parágrafos e centraliza o texto */
-     font-size:.9rem;
+     font-size: 1rem;
      display:flex;
      align-items:center;
 
      svg {
-       margin-right:.5rem; /* Espaçamento entre ícone e texto */
+       margin-right:.8rem; /* Espaçamento entre ícone e texto */
        color:#00bd95;
      }
    }

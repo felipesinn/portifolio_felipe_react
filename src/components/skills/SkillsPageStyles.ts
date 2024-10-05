@@ -28,14 +28,14 @@ export const SkillsList = styled.ul`
 `;
 
 export const SkillItem = styled.li`
-  background-color: #333; /* Cor de fundo dos itens */
+  background-color: #3c4753; /* Cor de fundo dos itens */
   color: white; /* Cor do texto */
   padding: 15px; /* Espaçamento interno */
   border-radius: 8px; /* Bordas arredondadas */
   text-align: center; /* Centraliza o texto */
 
   &:hover {
-    background-color: #444; /* Cor ao passar o mouse */
+    background-color: #008e6f; /* Cor ao passar o mouse */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
     transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
   }
