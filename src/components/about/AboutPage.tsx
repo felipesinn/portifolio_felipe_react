@@ -1,7 +1,7 @@
 // components/about/AboutPage.tsx
 import React from 'react';
 import PageContainer from '../common/PageContainer'; // Importando o PageContainer
-import { AboutContent, ProfileImage, TextContent } from './AboutStyles'; // Importando os estilos
+import { AboutContent, ProfileImage, TextContent, MissionVisionValues, ValueItem } from './AboutStyles'; // Importando os estilos
 import profileImage from '../../img/felipe1-depositphotos-bgremover.png'; // Imagem do perfil
 
 export const AboutPage: React.FC = () => {
@@ -27,6 +27,30 @@ export const AboutPage: React.FC = () => {
           </p>
         </TextContent>
       </AboutContent>
+
+      {/* Seções de Missão, Visão e Valores */}
+      <MissionVisionValues>
+        <ValueItem>
+          <h3>Nossa Missão</h3>
+          <p>Divulgar, criar e desenvolver soluções web planejadas e customizáveis que possam ser executadas em nível de desktop como também em dispositivos móveis.</p>
+        </ValueItem>
+
+        <ValueItem>
+          <h3>Nossa Visão</h3>
+          <p>Se tornar referência e ser reconhecida como a empresa com maior número de cases de sucesso na área de soluções web do noroeste do Rio Grande do Sul.</p>
+        </ValueItem>
+
+        <ValueItem>
+          <h3>Nossos Valores</h3>
+          <ul>
+            <li>Respeito</li>
+            <li>Confiança</li>
+            <li>Integridade</li>
+            <li>Compromisso</li>
+          </ul>
+        </ValueItem>
+      </MissionVisionValues>
+
     </PageContainer>
   );
-}
+};

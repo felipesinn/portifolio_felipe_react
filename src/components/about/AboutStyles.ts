@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const AboutContent = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alinha os itens no topo */
   justify-content: space-between; /* Alinha os itens nas extremidades */
   padding: 20px;
   
@@ -38,6 +38,7 @@ export const ProfileImage = styled.div`
     }
   }
 `;
+
 
 export const TextContent = styled.div`
   flex: 2; /* Ocupa um espaço maior que a imagem */
@@ -79,4 +80,61 @@ export const TextContent = styled.div`
       color:#00bd95; /* Cor diferenciada para destaque */
     }
 }
+`;
+
+export const MissionVisionValues = styled.div`
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   margin-top:40px;
+   color:white;
+
+   @media (max-width:768px) {
+     flex-direction: column;
+     align-items:center;
+     text-align:center;
+   }
+`;
+
+export const ValueItem = styled.div`
+   background-color: rgba(255,255,255,0.2); /* Fundo com leve transparência para destaque */
+   border-radius: 8px;
+   padding:15px;
+   margin-right:.5rem;
+   flex-basis: calc(30% - .5rem); // Ajusta a largura dos itens
+   transition: transform .3s ease, box-shadow .3s ease;
+
+   &:hover {
+     transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+     box-shadow: 0px 4px 20px rgba(0,189,149,0.8); /* Sombra com a cor #00bd95 */
+   }
+
+   h3 {
+     margin-bottom:.5rem;
+     text-align:center;
+     color:#008e6f; // Cor do título
+   }
+
+   p {
+     line-height:.9rem;
+     font-size:.9rem;
+     margin-bottom:.5rem;
+     color:#fff; // Cor do texto
+   }
+
+   ul {
+     list-style-type:none;
+     padding-left:.5rem;
+
+     li {
+       color:#ccc;
+       font-size:.9rem;
+     }
+   }
+
+   @media (max-width:768px) {
+     flex-basis: auto; // Permite que os itens ocupem toda a largura disponível
+     margin-right:0; // Remove margem lateral
+     margin-bottom:.5rem; // Espaçamento entre os itens
+   }
 `;
