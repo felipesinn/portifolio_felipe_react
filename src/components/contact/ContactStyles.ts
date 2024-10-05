@@ -1,6 +1,18 @@
 // components/contact/ContactStyles.ts
 import styled from 'styled-components';
 
+export const ContactContainer = styled.div`
+  display: flex;
+  justify-content: space-between; /* Alinha os itens nas extremidades */
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Muda para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+`;
+
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column; /* Alinha os campos em coluna */
@@ -10,10 +22,16 @@ export const ContactForm = styled.form`
   border-radius: 8px; /* Bordas arredondadas */
   width: 100%; /* Largura total */
   max-width: 500px; /* Largura máxima */
+
+  h3 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: white; /* Cor do texto do título */
+    text-align: center; /* Centraliza o título */
+  }
 `;
 
 export const FormField = styled.div`
-  margin-bottom: 15px; /* Espaçamento entre os campos */
+  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
 
   label {
     margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
@@ -28,7 +46,7 @@ export const FormField = styled.div`
     border-radius: 4px; /* Bordas arredondadas */
     border: none; /* Remove a borda padrão */
     box-shadow: inset 0 0 5px rgba(0,0,0,0.5); /* Sombra interna */
-    
+
     &:focus {
       outline: none; /* Remove o contorno padrão ao focar */
       box-shadow: inset 0 0 5px rgba(255,255,255,0.7); /* Sombra interna ao focar */
@@ -46,37 +64,47 @@ export const FormField = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-  background-color: #007bff; /* Cor de fundo do botão */
-  color: white; /* Cor do texto do botão */
-  padding: 10px; /* Espaçamento interno */
-  border-radius: 4px; /* Bordas arredondadas */
-  border: none; /* Remove a borda padrão */
+   background-color: #007bff; /* Cor de fundo do botão */
+   color: white; /* Cor do texto do botão */
+   padding: 10px; /* Espaçamento interno */
+   border-radius: 4px; /* Bordas arredondadas */
+   border: none; /* Remove a borda padrão */
 
    cursor: pointer; /* Muda o cursor para mãozinha ao passar sobre o botão */
 
    &:hover {
      background-color: #0056b3; /* Cor ao passar o mouse sobre o botão */
-     transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+     transition: background-color .3s ease; /* Transição suave da cor de fundo */
    }
 `;
 
 export const SuccessMessage = styled.p`
-   color: #28a745; 
+   color: #28a745;
    margin-top: 20px;
    font-size: 1.2rem;
+   text-align:center;
 `;
 
-// ... outros estilos ...
-
 export const ContactInfo = styled.div`
-  margin-top: 20px;
-  color: white; /* Cor do texto */
-  
-  h3 {
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-  }
+   margin-top:40px; /* Aumenta a margem superior para mais espaço acima das informações de contato */
+   margin-left:auto;
+   margin-right:auto;
+   color:white; /* Cor do texto */
 
-  p {
-    margin: 5px 0; /* Espaçamento entre os parágrafos */
-  }
+   h3 {
+     margin-bottom:10px; /* Espaçamento abaixo do título */
+     text-align:center;
+   }
+
+   p {
+     margin:.5rem auto; /* Espaçamento entre os parágrafos e centraliza o texto */
+     font-size:.9rem;
+     display:flex;
+     align-items:center;
+
+     svg {
+       margin-right:.5rem; /* Espaçamento entre ícone e texto */
+       color:#00bd95;
+     }
+   }
 `;
