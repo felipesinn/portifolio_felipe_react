@@ -10,7 +10,7 @@ export const HomeContainer = styled.div`
   background: linear-gradient(135deg, #21272f, #2c3e50);
   color: white;
   min-height: 100vh;
-  padding: 4em; 
+  padding: 8em; 
   font-family: 'Montserrat', sans-serif;
 
   @media (max-width: 768px) {

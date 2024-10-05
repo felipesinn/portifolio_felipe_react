@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background-color: #333; /* Cor de fundo do footer */
+  background-color: #21272f; /* Cor de fundo do footer */
   color: white; /* Cor do texto */
   padding: 20px; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */

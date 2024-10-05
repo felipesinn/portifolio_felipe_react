@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaPython, FaDatabase, FaDocker } from 'react-icons/fa'; // Importando ícones
 import PageContainer from '../common/PageContainer'; 
-import { SkillsList, SkillItem, SkillsContainer, InterpersonalSkillsContainer, CertificationContainer } from './SkillsPageStyles'; 
+import { SkillsList, SkillItem, SkillsContainer, InterpersonalSkillsContainer, CertificationContainer, Card } from './SkillsPageStyles'; 
 
 // Definindo um array de habilidades técnicas
 const skills = [
@@ -37,35 +37,40 @@ export const SkillsPage: React.FC = () => {
         <SkillsList>
           {skills.map((skill, index) => (
             <SkillItem key={index}>
-              {skill.icon}
-              <div>{skill.name}</div>
+              <Card>
+                {skill.icon}
+                <div>{skill.name}</div>
+              </Card>
             </SkillItem>
           ))}
         </SkillsList>
 
-        {/* Seção de Habilidades Interpessoais */}
-        <InterpersonalSkillsContainer>
-          <h2>Habilidades Interpessoais</h2>
-          <ul>
-            {interpersonalSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </InterpersonalSkillsContainer>
+        {/* Seção de Habilidades Interpessoais e Certificações */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          {/* Habilidades Interpessoais */}
+          <InterpersonalSkillsContainer>
+            <h2>Habilidades Interpessoais</h2>
+            <ul>
+              {interpersonalSkills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </InterpersonalSkillsContainer>
 
-        {/* Seção de Certificações e Cursos */}
-        <CertificationContainer>
-          <h2>Certificações e Cursos</h2>
-          <ul>
-            {certifications.map((certification, index) => (
-              <li key={index}>
-                <a href={certification.link} target="_blank" rel="noopener noreferrer">
-                  {certification.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </CertificationContainer>
+          {/* Certificações e Cursos */}
+          <CertificationContainer>
+            <h2>Certificações e Cursos</h2>
+            <ul>
+              {certifications.map((certification, index) => (
+                <li key={index}>
+                  <a href={certification.link} target="_blank" rel="noopener noreferrer">
+                    {certification.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </CertificationContainer>
+        </div>
       </SkillsContainer>
     </PageContainer>
   );

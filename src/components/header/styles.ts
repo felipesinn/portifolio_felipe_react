@@ -11,9 +11,14 @@ export const HeaderStyle = styled.header`
   align-items: center;
   background-color: #21272f;
   color: white;
-  padding: 18px;
+  padding: 14px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Alinha ao topo da página */
+  left: 0; /* Alinha à esquerda da página */
+  right: 0; /* Alinha à direita da página */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 `;
 
 export const H1 = styled.h1`
