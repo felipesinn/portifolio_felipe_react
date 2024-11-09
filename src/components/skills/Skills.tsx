@@ -8,7 +8,7 @@ import { SkillsList, SkillItem, SkillsContainer, Card } from './SkillsPageStyles
 const skills = [
   { name: 'JavaScript', icon: <FaJsSquare size={40} /> },
   { name: 'React', icon: <FaReact size={40} /> },
-  { name: 'Angulart', icon: <FaAngular size={40} /> },
+  { name: 'Angular', icon: <FaAngular size={40} /> },
   { name: 'Node.js', icon: <FaNodeJs size={40} /> },
   { name: 'CSS', icon: <FaCss3Alt size={40} /> },
   { name: 'Python', icon: <FaPython size={40} /> }, 

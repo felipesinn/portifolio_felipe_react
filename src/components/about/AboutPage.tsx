@@ -29,26 +29,26 @@ export const AboutPage: React.FC = () => {
 
     
       <MissionVisionValues>
-        <ValueItem>
-          <h3>Missão</h3>
-          <p>Divulgar, criar e desenvolver soluções web planejadas e customizáveis que possam ser executadas em nível de desktop como também em dispositivos móveis.</p>
-        </ValueItem>
+  <ValueItem>
+    <h3>Missão</h3>
+    <p>Desenvolver soluções web planejadas e personalizadas que sejam executadas em desktop e dispositivos móveis.</p>
+  </ValueItem>
 
-        <ValueItem>
-          <h3>Visão</h3>
-          <p>Se tornar referência e ser reconhecida como a empresa com maior número de cases de sucesso na área de soluções web do noroeste do Rio Grande do Sul.</p>
-        </ValueItem>
+  <ValueItem>
+    <h3>Visão</h3>
+    <p>Tornar-se uma referência reconhecido como desenvolvedor, transformando ideias em projetos que facilitam a vida dos usuários finais.</p>
+  </ValueItem>
 
-        <ValueItem>
-          <h3>Valores</h3>
-          <ul>
-            <li>Respeito</li>
-            <li>Confiança</li>
-            <li>Integridade</li>
-            <li>Compromisso</li>
-          </ul>
-        </ValueItem>
-      </MissionVisionValues>
+  <ValueItem>
+    <h3>Valores</h3>
+    <ul>
+      <li>Respeito</li>
+      <li>Confiança</li>
+      <li>Integridade</li>
+      <li>Compromisso</li>
+    </ul>
+  </ValueItem>
+</MissionVisionValues>
 
     </PageContainer>
   );
