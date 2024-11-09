@@ -1,7 +1,6 @@
-// components/contact/ContactPage.tsx
 import React, { useState } from 'react';
-import PageContainer from '../common/PageContainer'; // Importando o PageContainer
-import { ContactForm, FormField, SubmitButton, SuccessMessage, ContactInfo, ContactContainer } from './ContactStyles'; // Importando os estilos
+import PageContainer from '../common/PageContainer'; 
+import { ContactForm, FormField, SubmitButton, SuccessMessage, ContactInfo, ContactContainer } from './ContactStyles'; 
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 
@@ -33,7 +32,7 @@ export const ContactPage: React.FC = () => {
       setSuccess(true);
       setError('');
       
-      // Limpa o formulário após o envio
+      
       setFormData({
         name: '',
         email: '',
@@ -41,7 +40,7 @@ export const ContactPage: React.FC = () => {
         message: '',
       });
 
-      // Limpa a mensagem após 5 segundos
+      
       setTimeout(() => setSuccess(false), 5000);
     } else {
       setError('Por favor, preencha todos os campos.');
@@ -100,7 +99,7 @@ export const ContactPage: React.FC = () => {
                 required 
               />
             </FormField>
-            <SubmitButton type="submit">Enviar</SubmitButton>
+            <SubmitButton type="submit" color="#e74c3c">Enviar</SubmitButton>
             {success && (
               <SuccessMessage>Obrigado! Sua mensagem foi enviada com sucesso.</SuccessMessage>
             )}
@@ -110,7 +109,6 @@ export const ContactPage: React.FC = () => {
           </ContactForm>
         </div>
 
-        {/* Informações de Contato Adicionais */}
         <ContactInfo>
           <h3>Informações de Contato</h3>
           <p><EmailOutlinedIcon /> E-mail: felipesinn01@gmail.com</p>

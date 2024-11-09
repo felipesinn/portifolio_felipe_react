@@ -1,83 +1,80 @@
-// components/about/AboutStyles.ts
 import styled from 'styled-components';
 
 export const AboutContent = styled.div`
   display: flex;
-  align-items: flex-start; /* Alinha os itens no topo */
-  justify-content: space-between; /* Alinha os itens nas extremidades */
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 20px;
   
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra suave */
-  transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+  border-radius: 12px; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+  transition: transform 0.3s ease; 
 
   &:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px);
   }
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Muda para coluna em telas menores */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column; 
+    align-items: center;
   }
 `;
 
 export const ProfileImage = styled.div`
-  flex: 1; /* Ocupa um espaço igual */
-  
+  flex: 1; 
   .profile-image {
-    width: 260px; /* Ajuste conforme necessário */
-    height: 260px; /* Mantém a altura igual à largura para ser redonda */
-    border-radius: 50%; /* Torna a imagem redonda */
+    width: 260px; 
+    height: 260px; 
+    border-radius: 50%;
     margin-bottom: 20px;
     border: 2px solid #008e6f;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8); /* Sombra na imagem */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8); 
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.1); /* Efeito de aumento ao passar o mouse na imagem */
+      transform: scale(1.1); 
     }
   }
 `;
 
 
 export const TextContent = styled.div`
-  flex: 2; /* Ocupa um espaço maior que a imagem */
-  padding-left: 20px; /* Espaçamento à esquerda da coluna de texto */
+  flex: 2; 
+  padding-left: 20px; 
   
-  background-color: rgba(255,255,255,0.9); /* Fundo branco com leve transparência */
-  border-radius: 12px; /* Bordas arredondadas no cartão de texto */
-  padding: 20px; /* Espaçamento interno do cartão de texto */
+  background-color: rgba(255,255,255,0.9); 
+  border-radius: 12px; 
+  padding: 20px;
   
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra suave no cartão de texto */
-
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
   h2 {
     text-align: center;
-    color: #21272f; /* Cor escura para o título */
+    color: #21272f;
     margin-bottom: 20px;
-    font-size: 2rem; /* Tamanho maior para o título */
-    font-weight: bold; /* Negrito para destacar o título */
-    text-transform: uppercase; /* Letra maiúscula para um toque moderno */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
     transition: color 0.3s ease;
 
     &:hover {
-      color: #00bd95; /* Cor ao passar o mouse sobre o título */
+      color: #00bd95; 
     }
   }
 
   p {
-    color: #333; /* Cor do texto */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 15px; /* Espaçamento entre parágrafos */
-    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #333; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    font-size: 1.1rem; 
 
     @media (max-width:768px) {
-      font-size:1rem; /* Ajuste do tamanho da fonte em telas menores */
+      font-size:1rem; 
     }
     
     &:first-of-type {
-      font-weight:bold; /* Negrito para o primeiro parágrafo */
-      color:#00bd95; /* Cor diferenciada para destaque */
+      font-weight:bold; 
+      color:#00bd95; 
     }
 }
 `;
@@ -97,29 +94,29 @@ export const MissionVisionValues = styled.div`
 `;
 
 export const ValueItem = styled.div`
-   background-color: rgba(255,255,255,0.2); /* Fundo com leve transparência para destaque */
+   background-color: rgba(255,255,255,0.2); 
    border-radius: 8px;
    padding:15px;
    margin-right:.5rem;
-   flex-basis: calc(30% - .5rem); // Ajusta a largura dos itens
+   flex-basis: calc(30% - .5rem); 
    transition: transform .3s ease, box-shadow .3s ease;
 
    &:hover {
-     transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
-     box-shadow: 0px 4px 20px rgba(0,189,149,0.8); /* Sombra com a cor #00bd95 */
+     transform: scale(1.05); 
+     box-shadow: 0px 4px 20px rgba(0,189,149,0.8); 
    }
 
    h3 {
      margin-bottom:.5rem;
      text-align:center;
-     color:#008e6f; // Cor do título
+     color:#008e6f;
    }
 
    p {
      line-height:.9rem;
      font-size:.9rem;
      margin-bottom:.5rem;
-     color:#fff; // Cor do texto
+     color:#fff; 
    }
 
    ul {
@@ -133,8 +130,8 @@ export const ValueItem = styled.div`
    }
 
    @media (max-width:768px) {
-     flex-basis: auto; // Permite que os itens ocupem toda a largura disponível
-     margin-right:0; // Remove margem lateral
-     margin-bottom:.5rem; // Espaçamento entre os itens
+     flex-basis: auto; 
+     margin-right:0; 
+     margin-bottom:.5rem; 
    }
 `;

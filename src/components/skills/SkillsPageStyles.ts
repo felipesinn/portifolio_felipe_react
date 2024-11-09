@@ -2,63 +2,63 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
-  background-color: #21272f; /* Cor de fundo da caixa */
-  border-radius: 8px; /* Bordas arredondadas */
-  padding: 20px; /* Espaçamento interno */
-  margin: 100px 0; /* Margem superior e inferior */
+  background-color: #21272f; 
+  border-radius: 8px; 
+  padding: 20px; 
+  margin: 100px 0; 
 
   @media (max-width: 768px) {
-    margin: 50px 0; /* Reduzir margem em telas menores */
-    padding: 15px; /* Ajustar o padding em telas menores */
+    margin: 50px 0; 
+    padding: 15px; 
   }
 
   h2 {
     color: #fff; 
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    font-size: 2rem; /* Tamanho do título */
-    text-transform: uppercase; /* Letra maiúscula para um toque moderno */
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
   }
 `;
 
 export const SkillsList = styled.ul`
-  list-style-type: none; /* Remove os marcadores da lista */
-  padding: 0; /* Remove o padding padrão */
-  margin: 0; /* Remove a margem padrão */
+  list-style-type: none;
+  padding: 0;
+  margin: 0; 
   
-  display: flex; /* Usando flexbox para disposição horizontal */
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
+  display: flex; 
+  flex-wrap: wrap;
   
-  gap: 28px; /* Espaçamento entre os itens */
+  gap: 28px; 
 
   @media (max-width: 768px) {
-    gap: 15px; /* Reduzir o espaçamento entre itens em telas menores */
-    justify-content: center; /* Centraliza os itens em telas menores */
-    width: 100%; /* Garante que a lista ocupe toda a largura disponível */
-    margin-bottom: 20px; /* Adiciona espaço abaixo da lista */
+    gap: 15px; 
+    justify-content: center; 
+    width: 100%; 
+    margin-bottom: 20px; 
    }
 `;
 
 export const SkillItem = styled.li`
-   flex-basis: calc(25% - .5rem); // Ajusta a largura dos itens
+   flex-basis: calc(25% - .5rem); 
 
    @media (max-width:768px) {
-     flex-basis: calc(50% - .5rem); // Ajusta a largura dos itens em telas menores
+     flex-basis: calc(50% - .5rem); 
    }
 `;
 
 export const Card = styled.div`
-   background-color: #3c4753; /* Cor de fundo dos cartões */
-   color: white; /* Cor do texto */
-   padding: 15px; /* Espaçamento interno */
-   border-radius: 8px; /* Bordas arredondadas */
-   text-align: center; /* Centraliza o texto */
+   background-color: #3c4753; 
+   color: white; 
+   padding: 15px; 
+   border-radius: 8px; 
+   text-align: center; 
 
    &:hover {
-     background-color: #008e6f; /* Cor ao passar o mouse */
-     transition: background-color .3s ease, transform .2s ease; /* Transição suave */
-     transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+     background-color: #008e6f; 
+     transition: background-color .3s ease, transform .2s ease; 
+     transform: scale(1.05); 
    }
 `;
 

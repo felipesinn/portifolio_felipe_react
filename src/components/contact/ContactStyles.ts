@@ -1,80 +1,78 @@
-// components/contact/ContactStyles.ts
 import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
   display: flex;
-  justify-content: space-between; /* Alinha os itens nas extremidades */
+  justify-content: space-between; 
   padding: 40px;
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Muda para coluna em telas menores */
-    align-items: center; /* Centraliza os itens */
-    padding: 20px; /* Reduz o padding em telas menores */
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
   }
 `;
 
 export const ContactForm = styled.form`
   display: flex;
-  flex-direction: column; /* Alinha os campos em coluna */
-  background-color: #3c4753; /* Cor de fundo do formulário */
+  flex-direction: column; 
+  background-color: #3c4753; 
   border: 2px solid white;
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  width: 100%; /* Largura total */
-  max-width: 500px; /* Largura máxima */
+  padding: 20px; 
+  border-radius: 8px; 
+  width: 100%; 
+  max-width: 500px; 
 
   h3 {
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    color: white; /* Cor do texto do título */
-    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; 
+    color: white; 
+    text-align: center; 
   }
 `;
 
 export const FormField = styled.div`
-  margin-bottom: 15px; /* Aumenta o espaçamento entre os campos */
+  margin-bottom: 15px; 
 
   label {
-    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
-    color: white; /* Cor do texto do rótulo */
-    display: block; /* Faz o rótulo ocupar toda a largura */
+    margin-bottom: 5px; 
+    color: white; 
+    display: block; 
   }
 
   input,
   textarea {
-    width: 100%; /* Largura total do campo */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Bordas arredondadas */
-    border: none; /* Remove a borda padrão */
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); /* Sombra interna */
+    width: 100%; 
+    padding: 10px;
+    border-radius: 4px; 
+    border: none; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
 
     &:focus {
-      outline: none; /* Remove o contorno padrão ao focar */
-      box-shadow: inset 0 0 5px rgba(255,255,255,0.7); /* Sombra interna ao focar */
+      outline: none; 
+      box-shadow: inset 0 0 5px rgba(255,255,255,0.7); 
     }
 
     &::placeholder {
-      color: #ccc; /* Cor do texto placeholder */
+      color: #ccc; 
     }
   }
 
   textarea {
-    resize: vertical; /* Permite redimensionar verticalmente apenas */
-    min-height: 100px; /* Altura mínima do textarea */
+    resize: vertical; 
+    min-height: 100px; 
   }
 `;
 
 export const SubmitButton = styled.button`
-   background-color: #007bff; /* Cor de fundo do botão */
-   color: white; /* Cor do texto do botão */
-   padding: 10px; /* Espaçamento interno */
-   border-radius: 4px; /* Bordas arredondadas */
-   border: none; /* Remove a borda padrão */
-
-   cursor: pointer; /* Muda o cursor para mãozinha ao passar sobre o botão */
+   background-color: #008e6f; 
+   color: white; 
+   padding: 10px; 
+   border-radius: 4px;
+   border: none; 
+   cursor: pointer; 
 
    &:hover {
-     background-color: #0056b3; /* Cor ao passar o mouse sobre o botão */
-     transition: background-color .3s ease; /* Transição suave da cor de fundo */
+     background-color: #2c3e50; 
+     transition: background-color .3s ease; 
    }
 `;
 

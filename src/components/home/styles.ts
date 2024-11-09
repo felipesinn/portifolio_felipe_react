@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const HomeContainer = styled.div`
   display: flex;
-  flex-direction: column; /* Alinhamento vertical */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -24,13 +24,13 @@ export const Content = styled.div`
   align-items: center;
   max-width: 1200px;
   padding: 0 3rem;
-  gap: 5rem; /* Espaçamento entre os elementos */
+  gap: 5rem; 
 
   @media (max-width: 768px) {
     flex-direction: column; 
     padding: 0; 
     gap: 3rem;
-    margin-top: -5rem; /* Ajuste para melhor visualização em dispositivos móveis */
+    margin-top: -5rem; 
   }
 `;
 
@@ -140,11 +140,11 @@ export const ButtonCv = styled.button`
 export const ProjectsHighlight = styled.section`
 margin-top:100px; 
 min-height:50vh;
-width:100%; /* Define a largura total */
-max-width:680px; /* Ajuste o valor conforme necessário para a largura desejada */
+width:100%; 
+max-width:680px; 
 padding:20px; 
 border:2px solid white;
-background-color : #21272F; /* Fundo sutil */
+background-color : #21272F; 
 border-radius :8px;
 
 h2 {
@@ -156,64 +156,63 @@ h2 {
 }
 
 @media (max-width :768px) {
- margin-top :60px; /* Reduzir margem superior em telas menores */
- padding :15px; /* Ajuste o preenchimento em telas menores */
- max-width :90%; /* Aumenta a largura máxima em telas menores */
+ margin-top :60px; 
+ padding :15px; 
+ max-width :90%; 
 
  h2 {
-   font-size :1.5rem; /* Reduzir tamanho da fonte do título em telas menores */
+   font-size :1.5rem; 
  }
 }
 `;
 
 export const ProjectItem = styled.div`
-background-color : #3c4753; /* Fundo dos itens */
+background-color : #3c4753; 
 border :2px solid white;
-margin-bottom :15px; /* Espaçamento entre os itens */
-padding :18px ; /* Espaçamento interno */
-border-radius :4px ; /* Bordas arredondadas */
+margin-bottom :15px; 
+padding :18px ; 
+border-radius :4px ; 
 
-transition :transform .3s ease ; /* Transição suave */
+transition :transform .3s ease ; 
 
 &:hover {
  transform :scale(1.05); 
 }
 
 h3 {
- color:#fff ; /* Cor do título do projeto */
+ color:#fff ; 
  margin-bottom :5px ;
  font-size :1.5rem;
 
  @media (max-width :768px) {
-   font-size :1.3rem; /* Reduzir tamanho da fonte do título em telas menores */
+   font-size :1.3rem; 
  }
 }
 
 p {
- color:#ccc ; /* Cor da descrição */
+ color:#ccc ; 
  font-size :1rem;
 
  @media (max-width :768px) {
-   font-size :.9rem ; /* Reduzir tamanho da fonte da descrição em telas menores */
+   font-size :.9rem ;
  }
 }
 
 a {
- color:#008e6f ; /* Cor do link */
+ color:#008e6f ;
  font-size:1.2rem ;
  text-decoration:none;
 
  &:hover {
-   text-decoration:none ; /* Sublinhado ao passar o mouse */
+   text-decoration:none ; 
  }
 
  @media (max-width :768px) {
-   font-size :1rem ; /* Reduzir tamanho da fonte do link em telas menores */
+   font-size :1rem ; 
  }
 }
 `;
 
-// Adicione animações usando keyframes se necessário
 const fadeInDown = `
 @keyframes fadeInDown {
  from {

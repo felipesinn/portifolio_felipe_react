@@ -4,22 +4,22 @@ import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const IconContainer = styled.div`
   display: flex;
-  flex-direction: column; /* Padrão: coluna para telas maiores */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 20px; /* Distância da borda esquerda */
-  top: 78%; /* Posição vertical */
+  left: 20px; 
+  top: 78%; 
   transform: translateY(-50%); 
   margin-top: 2rem;
 
   @media (max-width: 768px) {
-    left: 10px; /* Ajuste para telas menores */
-    top: auto; /* Remove a posição fixa na vertical */
-    bottom: 20px; /* Posição fixa na parte inferior */
-    transform: none; /* Remove a transformação */
-    flex-direction: row; /* Muda para linha em telas menores */
-    gap: 1rem; /* Espaçamento entre os ícones */
+    left: 10px; 
+    top: auto; 
+    bottom: 20px; 
+    transform: none; 
+    flex-direction: row; 
+    gap: 1rem; 
     width: auto; 
     justify-content: center;
   }
@@ -53,7 +53,7 @@ const IconLink = styled.a`
   font-size: 2.2rem;
   transition: color 0.3s;
 
-  margin-bottom: 1rem; /* Espaçamento entre os ícones */
+  margin-bottom: 1rem; 
 
    &:hover {
     color: #008e6f;

@@ -2,29 +2,29 @@
 import styled from 'styled-components';
 
 export const ProjectsList = styled.ul`
-  list-style-type: none; /* Remove os marcadores da lista */
-  padding: 0; /* Remove o padding padrão */
-  margin: 0; /* Remove a margem padrão */
-  display: flex; /* Usando flexbox para disposição horizontal */
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
-  gap: 20px; /* Espaçamento entre os itens */
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
 `;
 
 export const ProjectItem = styled.li`
-  background-color: #333; /* Cor de fundo dos itens */
-  color: white; /* Cor do texto */
+  background-color: #333;
+  color: white; 
   border: 2px solid white;
-  padding: 15px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  width: calc(25% - 20px); /* Largura dos itens (4 itens por linha com espaçamento) */
+  padding: 15px; 
+  border-radius: 8px; 
+  width: calc(25% - 20px); 
 
   h3 {
-    margin-top: 0; /* Remove a margem superior do título */
+    margin-top: 0; 
   }
 
   &:hover {
-    background-color: #444; /* Cor ao passar o mouse */
-    transition: background-color 0.3s ease; /* Transição suave */
-    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+    background-color: #444;
+    transition: background-color 0.3s ease; 
+    transform: scale(1.05); 
   }
 `;

@@ -1,15 +1,14 @@
-// components/header/Header.tsx
 import React, { useState } from 'react';
-import { HeaderStyle, H1, Nav } from './styles'; // Importando os estilos
+import { HeaderStyle, H1, Nav } from './styles'; 
 import { Link } from 'react-router-dom';
-import { FaHome, FaTools, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'; // Importando ícones
+import { FaHome, FaTools, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'; 
 
-// Componente Header
+
 export const Header: React.FC = () => {
-  const [showMenu, setShowMenu] = useState(false); // Estado para controlar a exibição do menu
+  const [showMenu, setShowMenu] = useState(false); 
 
   const toggleMenu = () => {
-    setShowMenu((prev) => !prev); // Alterna a visibilidade do menu
+    setShowMenu((prev) => !prev); 
   };
 
   return (
@@ -20,7 +19,7 @@ export const Header: React.FC = () => {
         </Link>
       </H1>
       <Nav showMenu={showMenu}>
-        <button onClick={toggleMenu}>☰</button> {/* Botão para abrir/fechar o menu */}
+        <button onClick={toggleMenu}>☰</button> 
         <ul>
           <li><Link to="/"><FaHome /> Home</Link></li>
           <li><Link to="/habilidades"><FaTools /> Habilidades</Link></li>

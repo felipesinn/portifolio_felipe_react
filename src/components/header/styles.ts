@@ -1,4 +1,3 @@
-// components/header/styles.ts
 import styled from 'styled-components';
 
 interface NavProps {
@@ -13,12 +12,12 @@ export const HeaderStyle = styled.header`
   color: white;
   padding: 14px;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
-  position: fixed; /* Fixa o cabeçalho no topo */
-  top: 0; /* Alinha ao topo da página */
-  left: 0; /* Alinha à esquerda da página */
-  right: 0; /* Alinha à direita da página */
-  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
 `;
 
 export const H1 = styled.h1`
@@ -33,34 +32,34 @@ export const Nav = styled.nav<NavProps>`
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Exibir como linha por padrão */
+    display: flex; 
 
-    transition: max-height 0.3s ease; /* Transição suave */
-    overflow: hidden; /* Esconde itens quando não estão visíveis */
-    max-height: ${(props) => (props.showMenu ? '300px' : '0')}; /* Controla a altura do menu */
+    transition: max-height 0.3s ease; 
+    overflow: hidden; 
+    max-height: ${(props) => (props.showMenu ? '300px' : '0')}; 
     
     @media (max-width: 768px) {
-      flex-direction: column; /* Alinha verticalmente em telas menores */
-      position: absolute; /* Posiciona o menu em relação ao cabeçalho */
-      top: 60px; /* Distância do topo */
+      flex-direction: column; 
+      position: absolute; 
+      top: 60px; 
       right: 0; 
-      background-color: #21272f; /* Fundo do menu */
-      width: 100%; /* Largura total */
-      text-align: center; /* Centraliza o texto */
+      background-color: #21272f; 
+      width: 100%; 
+      text-align: center; 
 
       li {
-        margin: 1rem 0; /* Espaçamento entre os itens */
-        transition: transform 0.2s ease; /* Transição suave ao passar o mouse */
+        margin: 1rem 0; 
+        transition: transform 0.2s ease; 
 
         &:hover {
-          transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+          transform: scale(1.05); 
         }
       }
     }
     
     @media (min-width: 769px) {
-      display: flex; /* Exibe os links normalmente em telas maiores */
-      max-height: none; /* Garante que a altura não seja limitada */
+      display: flex; 
+      max-height: none; 
     }
   }
 
@@ -68,36 +67,36 @@ export const Nav = styled.nav<NavProps>`
     margin: 0 20px;
 
     &:hover a {
-      color: #00bd95; /* Cor ao passar o mouse sobre os links */
-      transition: color 0.3s ease; /* Transição suave da cor */
+      color: #00bd95; 
+      transition: color 0.3s ease; 
     }
     
     @media (max-width:768px) {
-      margin-bottom:.5rem; /* Ajusta margem em telas menores */
+      margin-bottom:.5rem; 
     }
     
     a {
-      display:flex; /* Para alinhar ícone e texto */
-      align-items:center; /* Centraliza verticalmente ícone e texto */
+      display:flex; 
+      align-items:center; 
       
       svg {
-        margin-right: .3rem; /* Espaçamento entre ícone e texto */
+        margin-right: .3rem; 
       }
       
       color:white;
       text-decoration:none;
 
       &:hover {
-        text-decoration:none; /* Sublinhado ao passar o mouse */
+        text-decoration:none; 
       }
     }
   }
 
   button {
-    display:none; /* Esconde o botão por padrão */
+    display:none; 
 
     @media (max-width:768px) {
-      display:block; /* Mostra o botão em telas menores */
+      display:block; 
       background:none;
       border:none;
       color:white;

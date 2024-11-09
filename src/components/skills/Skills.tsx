@@ -4,7 +4,6 @@ import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaPython, FaDatabase, FaDocke
 import PageContainer from '../common/PageContainer'; 
 import { SkillsList, SkillItem, SkillsContainer, Card } from './SkillsPageStyles'; 
 
-// Definindo um array de habilidades técnicas
 const skills = [
   { name: 'JavaScript', icon: <FaJsSquare size={40} /> },
   { name: 'React', icon: <FaReact size={40} /> },
