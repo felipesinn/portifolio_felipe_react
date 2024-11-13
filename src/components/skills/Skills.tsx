@@ -19,7 +19,7 @@ const skills = [
 export const SkillsPage: React.FC = () => {
   return (
     <PageContainer title="Minhas Habilidades">
-      <SkillsContainer>
+      <SkillsContainer id="habilidades">
         <h2>Habilidades Técnicas</h2>
         <SkillsList>
           {skills.map((skill, index) => (

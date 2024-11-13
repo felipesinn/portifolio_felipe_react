@@ -11,7 +11,7 @@ export const ProjectsPage: React.FC = () => {
 
   return (
     <PageContainer title="Meus Projetos">
-      <ProjectsHighlight>
+      <ProjectsHighlight id="projetos">
         <h2>Projetos em Destaque</h2>
         <ProjectItem>
           <img src={projetoA} alt="Capa do Projeto A" style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />

@@ -6,17 +6,25 @@ import { ContactPage } from "../components/contact/ContactPage";
 import { ProjectsPage } from "../components/projects/ProjectsPage";
 import { AboutPage } from "../components/about/AboutPage";
 
+function MainPage() {
+  return (
+    <div>
+      <HomePage />
+      <SkillsPage />
+      <ContactPage />
+      <ProjectsPage />
+      <AboutPage />
+    </div>
+  );
+}
+
 export function Router() {
-    return (
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/habilidades" element={<SkillsPage />} />
-          <Route path="/contato" element={<ContactPage />} />
-          <Route path="/projetos" element={<ProjectsPage />} />
-          <Route path="/sobre" element={<AboutPage />} />
-        </Routes>
-      </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

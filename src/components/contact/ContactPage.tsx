@@ -49,7 +49,7 @@ export const ContactPage: React.FC = () => {
 
   return (
     <PageContainer title="Contato">
-      <ContactContainer>
+      <ContactContainer id="contato">
         <div>
           <p style={{ color: 'white', marginBottom: '20px', textAlign: 'center' }}>
             Preencha o formulário abaixo para entrar em contato comigo. Responderei assim que possível!

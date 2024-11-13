@@ -5,8 +5,8 @@ import profileImage from '../../img/1731117521484.jpg';
 
 export const AboutPage: React.FC = () => {
   return (
-    <PageContainer title="Sobre Mim">
-      <AboutContent>
+    <PageContainer  title="Sobre Mim">
+      <AboutContent id="sobre">
         <ProfileImage>
           <img src={profileImage} alt="Perfil" className="profile-image" />
         </ProfileImage>

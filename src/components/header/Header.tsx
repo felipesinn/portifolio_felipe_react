@@ -1,34 +1,48 @@
-import React, { useState } from 'react';
-import { HeaderStyle, H1, Nav } from './styles'; 
-import { Link } from 'react-router-dom';
-import { FaHome, FaTools, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'; 
+import React, { useState } from "react";
+import { HeaderStyle, H1, Nav } from "./styles";
+import { Link as ScrollLink } from "react-scroll";
+import { FaHome, FaTools, FaEnvelope, FaProjectDiagram, FaUser } from "react-icons/fa";
 
 export const Header: React.FC = () => {
-  const [showMenu, setShowMenu] = useState(false); 
+  const [showMenu, setShowMenu] = useState(false);
 
-  const toggleMenu = () => {
-    setShowMenu((prev) => !prev); 
-  };
-
-  const handleLinkClick = () => {
-    setShowMenu(false); // Fecha o menu ao clicar em um link
-  };
+  const toggleMenu = () => setShowMenu((prev) => !prev);
 
   return (
     <HeaderStyle>
       <H1>
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <ScrollLink to="home" smooth={true} duration={400} offset={-200}>
           Felipe Sinn
-        </Link>
+        </ScrollLink>
       </H1>
       <Nav showMenu={showMenu}>
-        <button onClick={toggleMenu}>☰</button> 
+        <button onClick={toggleMenu}>☰</button>
         <ul>
-          <li><Link to="/" onClick={handleLinkClick}><FaHome /> Home</Link></li>
-          <li><Link to="/habilidades" onClick={handleLinkClick}><FaTools /> Habilidades</Link></li>
-          <li><Link to="/contato" onClick={handleLinkClick}><FaEnvelope /> Contato</Link></li>
-          <li><Link to="/projetos" onClick={handleLinkClick}><FaProjectDiagram /> Projetos</Link></li>
-          <li><Link to="/sobre" onClick={handleLinkClick}><FaUser /> Sobre</Link></li>
+          <li>
+            <ScrollLink to="home" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+              <FaHome /> Home
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="habilidades" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+              <FaTools /> Habilidades
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="contato" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+              <FaEnvelope /> Contato
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="projetos" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+              <FaProjectDiagram /> Projetos
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="sobre" smooth={true} duration={400} offset={-180} onClick={toggleMenu}>
+              <FaUser /> Sobre
+            </ScrollLink>
+          </li>
         </ul>
       </Nav>
     </HeaderStyle>
