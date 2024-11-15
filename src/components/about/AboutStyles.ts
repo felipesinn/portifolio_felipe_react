@@ -90,6 +90,7 @@ export const MissionVisionValues = styled.div`
      flex-direction: column;
      align-items:center;
      text-align:center;
+     gap: 20px;
    }
 `;
 
@@ -99,10 +100,9 @@ export const ValueItem = styled.div`
    padding:28px;
    margin-right:.8rem;
    width: 300px; 
-   min-height: 178px; 
+   min-height: 188px; 
    transition: transform .3s ease, box-shadow .3s ease;
    color: #ffffff;
-
    &:hover {
      transform: scale(1.05); 
      box-shadow: 0px 4px 20px rgba(0,189,149,0.8); 
@@ -115,7 +115,7 @@ export const ValueItem = styled.div`
    }
 
    p {
-     line-height:.9rem;
+     line-height: 1.2rem;
      font-size:.9rem;
      margin-bottom:.5rem;
     
@@ -123,7 +123,8 @@ export const ValueItem = styled.div`
 
    ul {
      list-style-type:none;
-     padding-left:.5rem;
+     padding-left: 0;
+     margin: 0;
 
      li {
        font-size:.9rem;
@@ -133,6 +134,7 @@ export const ValueItem = styled.div`
    @media (max-width:768px) {
      flex-basis: calc(18% - .1rem);  
      margin-right:0; 
+     align-items:center;
      margin-bottom: 2rem; 
    }
 `;
