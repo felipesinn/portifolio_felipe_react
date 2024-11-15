@@ -66,10 +66,10 @@ export const AboutPage: React.FC = () => {
         <ValueItem>
           <h3>Valores</h3>
           <ul>
-            <li>Respeito</li>
-            <li>Confiança</li>
-            <li>Integridade</li>
             <li>Compromisso</li>
+            <li>Integridade</li>
+            <li>Confiança</li>
+            <li>Respeito</li>
           </ul>
         </ValueItem>
       </MissionVisionValues>
