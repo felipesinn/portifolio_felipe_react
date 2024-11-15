@@ -24,22 +24,22 @@ export const Header: React.FC = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="habilidades" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+            <ScrollLink to="habilidades" smooth={true} duration={400} offset={-280} onClick={toggleMenu}>
               <FaTools /> Habilidades
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="contato" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+            <ScrollLink to="contato" smooth={true} duration={400} offset={-180} onClick={toggleMenu}>
               <FaEnvelope /> Contato
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="projetos" smooth={true} duration={400} offset={-200} onClick={toggleMenu}>
+            <ScrollLink to="projetos" smooth={true} duration={400} offset={-280} onClick={toggleMenu}>
               <FaProjectDiagram /> Projetos
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="sobre" smooth={true} duration={400} offset={-180} onClick={toggleMenu}>
+            <ScrollLink to="sobre" smooth={true} duration={400} offset={-190} onClick={toggleMenu}>
               <FaUser /> Sobre
             </ScrollLink>
           </li>

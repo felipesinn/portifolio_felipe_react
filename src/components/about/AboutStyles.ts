@@ -41,7 +41,6 @@ export const ProfileImage = styled.div`
 export const TextContent = styled.div`
   flex: 2; 
   padding-left: 20px; 
-  
   background-color: rgba(255,255,255,0.9); 
   border-radius: 12px; 
   padding: 20px;
@@ -83,8 +82,9 @@ export const MissionVisionValues = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-   margin-top:40px;
-   color:white;
+   margin-top:128px;
+   flex-wrap: wrap;
+   gap: 80px;
 
    @media (max-width:768px) {
      flex-direction: column;
@@ -95,11 +95,13 @@ export const MissionVisionValues = styled.div`
 
 export const ValueItem = styled.div`
    background-color: rgba(255,255,255,0.2); 
-   border-radius: 8px;
-   padding:15px;
-   margin-right:.5rem;
-   flex-basis: calc(30% - .5rem); 
+   border-radius: 12px;
+   padding:28px;
+   margin-right:.8rem;
+   width: 300px; 
+   min-height: 178px; 
    transition: transform .3s ease, box-shadow .3s ease;
+   color: #ffffff;
 
    &:hover {
      transform: scale(1.05); 
@@ -116,7 +118,7 @@ export const ValueItem = styled.div`
      line-height:.9rem;
      font-size:.9rem;
      margin-bottom:.5rem;
-     color:#fff; 
+    
    }
 
    ul {
@@ -124,14 +126,13 @@ export const ValueItem = styled.div`
      padding-left:.5rem;
 
      li {
-       color:#ccc;
        font-size:.9rem;
      }
    }
 
    @media (max-width:768px) {
-     flex-basis: auto; 
+     flex-basis: calc(18% - .1rem);  
      margin-right:0; 
-     margin-bottom:.5rem; 
+     margin-bottom: 2rem; 
    }
 `;
