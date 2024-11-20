@@ -1,13 +1,18 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import projetoA from '../../img/pokemon.png';
-import projetoB from '../../img/CZNet-Branco-Vermelho-Copia.png';
-import projetoC from '../../img/GrowFlix.png';
+import projetoA from "../../img/pokemon.png";
+import projetoB from "../../img/CZNet-Branco-Vermelho-Copia.png";
+import projetoC from "../../img/GrowFlix.png";
 
 import {
   CarouselContainer,
@@ -15,34 +20,34 @@ import {
   SlideImage,
   SlideText,
   ButtonContainer,
-  ProjectButton
-} from './ProjectsStyles';
-import PageContainer from '../common/PageContainer';
+  ProjectButton,
+} from "./ProjectsStyles";
+import PageContainer from "../common/PageContainer";
 
 const projects = [
   {
-    id: 'pokemon',
-    title: 'Pokémon',
-    description: 'Projeto de estudo com a API do mundo Pokémon.',
+    id: "pokemon",
+    title: "Pokémon",
+    description: "Projeto de estudo com a API do mundo Pokémon.",
     image: projetoA,
-    github: 'https://github.com/felipe-sinn/api-pokemon-react',
-    site: 'https://api-pokemon-react.vercel.app/',
+    github: "https://github.com/felipe-sinn/api-pokemon-react",
+    site: "https://api-pokemon-react.vercel.app/",
   },
   {
-    id: 'soundmaster',
-    title: 'SoundMaster Pro',
-    description: 'Gravador de áudio para rádios.',
+    id: "soundmaster",
+    title: "SoundMaster Pro",
+    description: "Gravador de áudio para rádios.",
     image: projetoB,
-    github: 'https://github.com/felipe-sinn/soundmaster-pro',
-    site: 'https://soundmaster-pro.example.com/',
+    github: "https://github.com/felipe-sinn/soundmaster-pro",
+    site: "https://soundmaster-pro.example.com/",
   },
   {
-    id: 'growflix',
-    title: 'GrowFlix',
-    description: 'Plataforma fictícia de streaming de vídeos.',
+    id: "growflix",
+    title: "GrowFlix",
+    description: "Plataforma fictícia de streaming de vídeos.",
     image: projetoC,
-    github: 'https://github.com/felipe-sinn/growflix',
-    site: 'https://growflix.example.com/',
+    github: "https://github.com/felipe-sinn/growflix",
+    site: "https://growflix.example.com/",
   },
 ];
 
@@ -52,15 +57,38 @@ export const ProjectsPage: React.FC = () => {
       <div id="projetos">
         <CarouselContainer>
           <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
+            modules={[Autoplay, EffectCoverflow, Navigation, Pagination]}
+            effect="coverflow"
+            grabCursor
+            centeredSlides
+            loop
+            slidesPerView="auto"
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
             }}
             pagination={{ clickable: true }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            navigation
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
           >
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
@@ -71,18 +99,18 @@ export const ProjectsPage: React.FC = () => {
                     <p>{project.description}</p>
                     <ButtonContainer>
                       <ProjectButton
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ver no GitHub
+                      </ProjectButton>
+                      <ProjectButton
                         href={project.site}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         Acessar Site
-                      </ProjectButton>
-                      <ProjectButton
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Código no GitHub
                       </ProjectButton>
                     </ButtonContainer>
                   </SlideText>
