@@ -13,7 +13,7 @@ const Container = styled.div`
 
   h1 {
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 2.5rem;
     text-transform: uppercase;

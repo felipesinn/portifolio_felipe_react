@@ -229,3 +229,13 @@ const fadeInDown = `
 export const GlobalStyle = createGlobalStyle`
  ${fadeInDown}
 `;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo preto com transparência */
+  z-index: 1; /* Coloca o overlay acima do conteúdo principal */
+`;

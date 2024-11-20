@@ -1,103 +1,97 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import projetoA from '../../img/pokemon.png';
-import projetoB from '../../img/SoundMaster Pro.png';
-import { 
-  CarouselContainer, 
-  ProjectCard, 
-  CarouselButtons, 
-  CarouselNavigation, 
-  ModalContent, 
-  ModalBackdrop, 
-  CloseButton 
+import projetoB from '../../img/CZNet-Branco-Vermelho-Copia.png';
+import projetoC from '../../img/GrowFlix.png';
+
+import {
+  CarouselContainer,
+  SlideContent,
+  SlideImage,
+  SlideText,
+  ButtonContainer,
+  ProjectButton
 } from './ProjectsStyles';
 import PageContainer from '../common/PageContainer';
 
+const projects = [
+  {
+    id: 'pokemon',
+    title: 'Pokémon',
+    description: 'Projeto de estudo com a API do mundo Pokémon.',
+    image: projetoA,
+    github: 'https://github.com/felipe-sinn/api-pokemon-react',
+    site: 'https://api-pokemon-react.vercel.app/',
+  },
+  {
+    id: 'soundmaster',
+    title: 'SoundMaster Pro',
+    description: 'Gravador de áudio para rádios.',
+    image: projetoB,
+    github: 'https://github.com/felipe-sinn/soundmaster-pro',
+    site: 'https://soundmaster-pro.example.com/',
+  },
+  {
+    id: 'growflix',
+    title: 'GrowFlix',
+    description: 'Plataforma fictícia de streaming de vídeos.',
+    image: projetoC,
+    github: 'https://github.com/felipe-sinn/growflix',
+    site: 'https://growflix.example.com/',
+  },
+];
 
 export const ProjectsPage: React.FC = () => {
-  const projects = [
-    {
-      id: 'pokemon',
-      title: 'Pokémon',
-      description: 'Este projeto foi feito pra fins de estudo da API do mundo Pokémon.',
-      technologies: ['React', 'TypeScript', 'API REST'],
-      duration: '2 semanas',
-      challenges: 'Consumir a API e lidar com a paginação de resultados.',
-      image: projetoA,
-      link: 'https://api-pokemon-react-3.vercel.app',
-      github: 'https://github.com/felipe-sinn/api-pokemon-react'
-    },
-    {
-      id: 'soundmaster',
-      title: 'SoundMaster Pro',
-      description: 'SoundMaster Pro é um gravador de áudio para rádios.',
-      technologies: ['Python', 'Tkinter', 'PyAudio'],
-      duration: '1 mês',
-      challenges: 'Desenvolver o layout e integrar a captura de áudio.',
-      image: projetoB,
-      link: 'https://github.com/felipe-sinn/soundmaster-pro',
-      github: 'https://github.com/felipe-sinn/soundmaster-pro'
-    }
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
-  };
-
-  const closeModal = () => setSelectedProject(null);
-
   return (
     <PageContainer title="Meus Projetos">
       <div id="projetos">
         <CarouselContainer>
-          <ProjectCard>
-            <img src={projects[currentIndex].image} alt={projects[currentIndex].title} />
-            <h3>{projects[currentIndex].title}</h3>
-            <p>{projects[currentIndex].description}</p>
-            <CarouselButtons>
-              <button onClick={() => setSelectedProject(currentIndex)}>Saiba Mais</button>
-              <a 
-                href={projects[currentIndex].github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </CarouselButtons>
-          </ProjectCard>
-          <CarouselNavigation>
-            <button onClick={handlePrev} aria-label="Anterior">‹</button>
-            <button onClick={handleNext} aria-label="Próximo">›</button>
-          </CarouselNavigation>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+          >
+            {projects.map((project) => (
+              <SwiperSlide key={project.id}>
+                <SlideContent>
+                  <SlideImage src={project.image} alt={project.title} />
+                  <SlideText>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <ButtonContainer>
+                      <ProjectButton
+                        href={project.site}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Acessar Site
+                      </ProjectButton>
+                      <ProjectButton
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Código no GitHub
+                      </ProjectButton>
+                    </ButtonContainer>
+                  </SlideText>
+                </SlideContent>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </CarouselContainer>
-
-        {selectedProject !== null && (
-          <ModalBackdrop onClick={closeModal}>
-            <ModalContent onClick={(e) => e.stopPropagation()}>
-              <CloseButton onClick={closeModal} aria-label="Fechar">×</CloseButton>
-              <img 
-                src={projects[selectedProject].image} 
-                alt={projects[selectedProject].title} 
-                style={{ width: '100%', borderRadius: '8px' }} 
-              />
-              <h3>{projects[selectedProject].title}</h3>
-              <p><strong>Descrição:</strong> {projects[selectedProject].description}</p>
-              <p><strong>🛠 Tecnologias:</strong> {projects[selectedProject].technologies.join(', ')}</p>
-              <p><strong>⏳ Duração:</strong> {projects[selectedProject].duration}</p>
-              <p><strong>🚀 Desafios:</strong> {projects[selectedProject].challenges}</p>
-              <a href={projects[selectedProject].link} target="_blank" rel="noopener noreferrer">Ver Mais</a>
-            </ModalContent>
-          </ModalBackdrop>
-        )}
       </div>
     </PageContainer>
   );
 };
-
-export default ProjectsPage;
