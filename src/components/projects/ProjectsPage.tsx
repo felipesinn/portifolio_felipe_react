@@ -19,8 +19,8 @@ import {
   SlideContent,
   SlideImage,
   SlideText,
-  ButtonContainer,
   ProjectButton,
+  ButtonContainer,
 } from "./ProjectsStyles";
 import PageContainer from "../common/PageContainer";
 
@@ -62,7 +62,7 @@ export const ProjectsPage: React.FC = () => {
             grabCursor
             centeredSlides
             loop
-            slidesPerView="auto"
+            slidesPerView={1} // padrão para telas menores
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
@@ -76,17 +76,17 @@ export const ProjectsPage: React.FC = () => {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              320: {
+              480: {
                 slidesPerView: 1,
                 spaceBetween: 10,
               },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 15,
               },
               1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+                slidesPerView: 1,
+                spaceBetween: 20,
               },
             }}
           >

@@ -4,8 +4,8 @@ export const CarouselContainer = styled.div`
   background: linear-gradient(135deg, #1c1f24, #343a40);
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 400px;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 
@@ -15,11 +15,11 @@ export const CarouselContainer = styled.div`
 `;
 
 export const SlideContent = styled.div`
-  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 4em;
   max-width: 400px;
 
   @media (max-width: 768px) {
