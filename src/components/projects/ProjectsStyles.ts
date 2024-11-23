@@ -48,6 +48,8 @@ export const SlideText = styled.div`
     font-size: 1.8rem;
     color: #f8f9fa;
     margin-bottom: 10px;
+    padding:28px 24px;
+
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
