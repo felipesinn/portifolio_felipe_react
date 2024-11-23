@@ -67,11 +67,11 @@ export const SlideText = styled.div`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 15px;
+  gap: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 `;
 
@@ -79,16 +79,16 @@ export const ProjectButton = styled.a`
   text-decoration: none;
   padding: 12px 25px;
   border-radius: 5px;
-  color: #f8f9fa;
-  background-color: #007bff;
+  color: #fff;
+  background-color: #008e6f;
   font-weight: bold;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 0 2px #00bd95;
 
   &:hover {
-    background-color: #0056b3;
-    box-shadow: 0 6px 10px rgba(0, 86, 179, 0.5);
+    background-color: #00664f;
+    box-shadow: 0 2px 8px #008e6f;
   }
 
   @media (max-width: 768px) {
