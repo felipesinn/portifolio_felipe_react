@@ -1,16 +1,14 @@
 // components/skills/SkillsPage.tsx
 import React from 'react';
-import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaPython, FaDatabase, FaDocker, FaAngular } from 'react-icons/fa'; // Importando ícones
+import { FaJsSquare, FaReact, FaNodeJs, FaCss3Alt, FaDatabase, FaDocker} from 'react-icons/fa'; // Importando ícones
 import PageContainer from '../common/PageContainer'; 
 import { SkillsList, SkillItem, SkillsContainer, Card } from './SkillsPageStyles'; 
 
 const skills = [
   { name: 'JavaScript', icon: <FaJsSquare size={40} /> },
   { name: 'React', icon: <FaReact size={40} /> },
-  { name: 'Angular', icon: <FaAngular size={40} /> },
   { name: 'Node.js', icon: <FaNodeJs size={40} /> },
   { name: 'CSS', icon: <FaCss3Alt size={40} /> },
-  { name: 'Python', icon: <FaPython size={40} /> }, 
   { name: 'PostgreSQL', icon: <FaDatabase size={40} /> }, 
   { name: 'Docker', icon: <FaDocker size={40} /> },
 ];

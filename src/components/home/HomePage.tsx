@@ -11,7 +11,6 @@ import {
   ProfileImage,
   ContainerIcons,
   ButtonCv,
-  
 } from "./styles";
 
 export function HomePage() {
@@ -21,15 +20,14 @@ export function HomePage() {
         <TextContainer>
           <Title>Bem-vindo ao meu Portfólio!</Title>
           <Subtitle>
-            Explore meus projetos e conheça minha trajetória profissional.
-            Aqui, você encontrará uma seleção dos meus trabalhos, além de
-            insights sobre minhas habilidades e experiências. Vamos descobrir
-            juntos como posso contribuir para o seu próximo projeto.
+            Sou Analista de Redes e desenvolvedor Fullstack com experiência em
+            TypeScript, NodeJS e ReactJS. Especialista em soluções para
+            telecomunicações, com foco em eficiência,
+            inovação e resultados.
           </Subtitle>
           <a href="/cv.pdf" download>
             <ButtonCv>Download CV</ButtonCv>
           </a>
-          
         </TextContainer>
 
         <Bord>
@@ -39,9 +37,7 @@ export function HomePage() {
         </Bord>
       </Content>
 
-      <ContainerIcons>
-        {/* <SocialIcons /> */}
-      </ContainerIcons>
+      <ContainerIcons>{/* <SocialIcons /> */}</ContainerIcons>
     </HomeContainer>
   );
 }

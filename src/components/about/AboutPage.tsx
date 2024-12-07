@@ -19,28 +19,19 @@ export const AboutPage: React.FC = () => {
         <TextContent>
           <h2>Quem Sou Eu</h2>
           <p>
-            Iniciei minha atuação profissional na área de TI em 2017 como
-            técnico em informática, profissão que desenvolvo até os dias atuais.
+            Minha jornada na TI começou em 2017 como técnico em informática,
+            onde desenvolvi uma base sólida de conhecimento técnico.
           </p>
           <p>
-            Em 2020, tive meu primeiro contato com a área de programação. Foi
-            paixão à primeira vista! Comecei a pesquisar instituições de ensino,
-            interessado em fazer uma faculdade e optei pela Estácio, pela
-            possibilidade de conciliar o curso com minha rotina de trabalho.
+            Desde então, venho evoluindo continuamente, concluindo o curso de
+            1000 horas de Full-Stack na Growdev e atualmente cursando o terceiro
+            semestre de Análise e Desenvolvimento de Sistemas pela Estácio.
           </p>
           <p>
-            Atualmente, estou inteiramente focado em compreender as exigências
-            dinâmicas do mercado de tecnologia. Estou participando ativamente do
-            Bootcamp online promovido pela Growdev, uma formação Full-Stack que
-            está me capacitando de forma abrangente para os desafios do mercado
-            de trabalho.
-          </p>
-          <p>
-            Além disso, tenho dedicado meu tempo a projetos paralelos, onde
-            coloco em prática os conhecimentos adquiridos. Estou ansioso para
-            construir uma carreira sólida e promissora neste campo em constante
-            evolução, sempre em busca de oportunidades de aprendizado contínuo e
-            crescimento profissional.
+            Atuo como Analista de Redes, combinando experiência prática com
+            sólida formação em tecnologia. Meu foco é oferecer soluções
+            eficientes e inovadoras que atendam às demandas do mercado e
+            contribuam para o sucesso dos projetos em que estou envolvido.
           </p>
         </TextContent>
       </AboutContent>

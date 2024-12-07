@@ -11,9 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import projetoA from "../../img/pokemon.png";
-import projetoB from "../../img/CZNet-Branco-Vermelho-Copia.png";
-import projetoC from "../../img/GrowFlix.png";
-
+import projetoB from "../../img/Captura de tela 2024-12-07 154631.png";
+import projetoC from "../../img/Inserir um título.png";
 import {
   CarouselContainer,
   SlideContent,
@@ -25,30 +24,35 @@ import {
 import PageContainer from "../common/PageContainer";
 
 const projects = [
+  
+  {
+    id: "Projetos em Construção",
+    title: "Projetos em Construção",
+    description: "Página está em contrução em breve terá mais projetos",
+    image: projetoC,
+  },
   {
     id: "pokemon",
     title: "Pokémon",
     description: "Projeto de estudo com a API do mundo Pokémon.",
     image: projetoA,
-    github: "https://github.com/felipe-sinn/api-pokemon-react",
-    site: "https://api-pokemon-react.vercel.app/",
+    github: "https://github.com/felipesinn/api_pokemon_react_3",
+    site: "https://api-pokemon-react-3.vercel.app/",
   },
   {
-    id: "soundmaster",
-    title: "SoundMaster Pro",
-    description: "Gravador de áudio para rádios.",
+    id: "Rick and morty",
+    title: "Rick Rick and morty",
+    description: "Projeto de estudo com a API do mundo Rick Morty.",
     image: projetoB,
-    github: "https://github.com/felipe-sinn/soundmaster-pro",
-    site: "https://soundmaster-pro.example.com/",
+    github: "https://github.com/felipesinn/projeto-frontEnd-2-growdev-rick-and-morty.git",
+    site: "https://projeto-front-end-2-growdev-rick-and-morty.vercel.app/",
   },
   {
-    id: "growflix",
-    title: "GrowFlix",
-    description: "Plataforma fictícia de streaming de vídeos.",
+    id: "Projetos em Construção",
+    title: "Projetos em Construção",
+    description: "Página está em contrução em breve terá mais projetos",
     image: projetoC,
-    github: "https://github.com/felipe-sinn/growflix",
-    site: "https://growflix.example.com/",
-  },
+  }
 ];
 
 export const ProjectsPage: React.FC = () => {
@@ -72,7 +76,7 @@ export const ProjectsPage: React.FC = () => {
             pagination={{ clickable: true }}
             navigation
             autoplay={{
-              delay: 2500,
+              delay: 5500,
               disableOnInteraction: false,
             }}
             breakpoints={{
