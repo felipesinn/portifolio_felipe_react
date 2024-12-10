@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
   EffectCoverflow,
-  Navigation,
   Pagination,
 } from "swiper/modules";
 import "swiper/css";
@@ -60,40 +59,40 @@ export const ProjectsPage: React.FC = () => {
     <PageContainer title="Meus Projetos">
       <div id="projetos">
         <CarouselContainer>
-          <Swiper
-            modules={[Autoplay, EffectCoverflow, Navigation, Pagination]}
-            effect="coverflow"
-            grabCursor
-            centeredSlides
-            loop
-            slidesPerView={1} // padrão para telas menores
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-            }}
-            pagination={{ clickable: true }}
-            navigation
-            autoplay={{
-              delay: 5500,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
-              1024: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-            }}
-          >
+        <Swiper
+  modules={[Autoplay, EffectCoverflow, Pagination]} // Remova o Navigation daqui
+  effect="coverflow"
+  grabCursor
+  centeredSlides
+  loop
+  slidesPerView={1} // padrão para telas menores
+  coverflowEffect={{
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+  }}
+  pagination={{ clickable: true }}
+  autoplay={{
+    delay: 5500,
+    disableOnInteraction: false,
+  }}
+  breakpoints={{
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  }}
+>
+
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
                 <SlideContent>

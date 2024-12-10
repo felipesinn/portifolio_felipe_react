@@ -5,7 +5,7 @@ export const CarouselContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 400px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 
@@ -31,7 +31,7 @@ export const SlideImage = styled.img`
   width: 100%;
   max-width: 400px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   transition: transform 0.3s ease;
 
   &:hover {
