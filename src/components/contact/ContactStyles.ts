@@ -87,21 +87,21 @@ export const ContactInfo = styled.div`
    margin-top:38%;
    margin-left:auto;
    margin-right:auto;
-   color:white; /* Cor do texto */
+   color:white;
 
    h3 {
-     margin-bottom:18px; /* Espaçamento abaixo do título */
+     margin-bottom:18px; 
      text-align:center;
    }
 
    p {
-     margin:.5rem auto; /* Espaçamento entre os parágrafos e centraliza o texto */
+     margin:.5rem auto; 
      font-size: 1rem;
      display:flex;
      align-items:center;
 
      svg {
-       margin-right:.8rem; /* Espaçamento entre ícone e texto */
+       margin-right:.8rem; 
        color:#00bd95;
      }
    }

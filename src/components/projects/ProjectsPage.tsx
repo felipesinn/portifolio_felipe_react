@@ -9,8 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import projetoA from "../../img/pokemon.png";
-import projetoB from "../../img/Captura de tela 2024-12-07 154631.png";
+/*import projetoA from "../../img/pokemon.png";*/
+/*import projetoB from "../../img/Captura de tela 2024-12-07 154631.png";*/
 import projetoC from "../../img/Inserir um título.png";
 import {
   CarouselContainer,
@@ -30,6 +30,7 @@ const projects = [
     description: "Página está em contrução em breve terá mais projetos",
     image: projetoC,
   },
+  /*
   {
     id: "pokemon",
     title: "Pokémon",
@@ -45,7 +46,7 @@ const projects = [
     image: projetoB,
     github: "https://github.com/felipesinn/projeto-frontEnd-2-growdev-rick-and-morty.git",
     site: "https://projeto-front-end-2-growdev-rick-and-morty.vercel.app/",
-  },
+  },*/
   {
     id: "Projetos em Construção",
     title: "Projetos em Construção",
@@ -65,7 +66,7 @@ export const ProjectsPage: React.FC = () => {
   grabCursor
   centeredSlides
   loop
-  slidesPerView={1} // padrão para telas menores
+  slidesPerView={1} 
   coverflowEffect={{
     rotate: 50,
     stretch: 0,
@@ -102,16 +103,12 @@ export const ProjectsPage: React.FC = () => {
                     <p>{project.description}</p>
                     <ButtonContainer>
                       <ProjectButton
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        
                       >
                         Ver no GitHub
                       </ProjectButton>
                       <ProjectButton
-                        href={project.site}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        
                       >
                         Acessar Site
                       </ProjectButton>

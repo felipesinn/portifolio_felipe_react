@@ -1,4 +1,3 @@
-// components/home/HomePage.tsx
 import profileImage from "../../img/felipe1-depositphotos-bgremover.png";
 import {
   Content,

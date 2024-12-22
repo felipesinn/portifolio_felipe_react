@@ -1,4 +1,3 @@
-// components/iconsLink/SocialIcons.tsx
 import styled from "styled-components";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 

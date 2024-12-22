@@ -24,6 +24,7 @@ export const SlideContent = styled.div`
 
   @media (max-width: 768px) {
     padding: 15px;
+    margin-bottom: 24px;
   }
 `;
 

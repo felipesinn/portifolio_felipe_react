@@ -1,4 +1,3 @@
-// components/common/Footer.tsx
 import React from 'react';
 import { FooterContainer, FooterText, SocialLinks } from './FooterStyles'; // Importando os estilos
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';

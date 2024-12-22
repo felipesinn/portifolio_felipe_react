@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="habilidades" smooth={true} duration={400} offset={-280} onClick={toggleMenu}>
+            <ScrollLink to="habilidades" smooth={true} duration={400} offset={-260} onClick={toggleMenu}>
               <FaTools /> Habilidades
             </ScrollLink>
           </li>
