@@ -24,7 +24,7 @@ export function HomePage() {
             telecomunicações, com foco em eficiência,
             inovação e resultados.
           </Subtitle>
-          <a href="/cv.pdf" download>
+          <a href="Currículo.pdf" download>
             <ButtonCv>Download CV</ButtonCv>
           </a>
         </TextContainer>
