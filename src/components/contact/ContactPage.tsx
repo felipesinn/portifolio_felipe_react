@@ -4,6 +4,8 @@ import { ContactForm, FormField, SubmitButton, SuccessMessage, ContactInfo, Cont
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 
+const API_URL = 'http://localhost:3000/api';
+
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,25 +27,45 @@ export const ContactPage: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // Simulando envio bem-sucedido
-    if (formData.name && formData.email && formData.subject && formData.message) {
-      console.log('Dados do formulário:', formData);
-      setSuccess(true);
-      setError('');
-      
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-
-      
-      setTimeout(() => setSuccess(false), 5000);
-    } else {
-      setError('Por favor, preencha todos os campos.');
+    
+    try {
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            setError('Por favor, preencha todos os campos.');
+            return;
+        }
+  
+        const response = await fetch(`${API_URL}/submit`, { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: formData.name,
+                email: formData.email,
+                phone: formData.subject,  
+                message: formData.message
+            })
+        });
+  
+        const data = await response.json();
+  
+        if (!response.ok) {
+            throw new Error(data.error || 'Erro ao enviar formulário');
+        }
+  
+        setSuccess(true);
+        setError('');
+        setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        });
+  
+        setTimeout(() => setSuccess(false), 5000);
+    } catch (error) {
+        console.error('Erro ao enviar formulário:', error);
+        setError(error instanceof Error ? error.message : 'Erro ao enviar formulário');
     }
   };
 
